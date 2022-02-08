@@ -1,7 +1,7 @@
 ------------------------------------------------
 -- This Source Was Developed By (KADI) @D9l9l.--
 --   This Is The Source Channel @D9l9l .   --
---                -𝗦𝗼𝘂𝗿𝗰𝗲 𝗕𝗮𝗻𝗱𝗲-                 --
+--                - 𝗦𝗼𝘂𝗿𝗰𝗲 𝗞𝗔𝗗𝗜-                 --
 --        -- https://t.me/D9l9l --         --
 ------------------------------------------------ 
 URL     = require("./libs/url")
@@ -83,13 +83,13 @@ local Run = io.open("Run", 'w')
 Run:write([[
 cd $(cd $(dirname $0); pwd)
 while(true) do
-screen -S i -X kill
-screen -S i ./MTX
+screen -S MTX -X kill
+screen -S MTX ./MTX
 done
 ]])
 Run:close()
 Redis:del(SshId.."Info:Redis:User:ID");Redis:del(SshId.."Info:Redis:User");Redis:del(SshId.."Info:Redis:Token:User");Redis:del(SshId.."Info:Redis:Token")
-os.execute('chmod +x i;chmod +x Run;./Run')
+os.execute('chmod +x MTX;chmod +x Run;./Run')
 end
 Information = dofile('./Information.lua')
 Sudo_Id = Information.SudoId
@@ -117,7 +117,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos ={Sudo_Id,1712951948, 694635826}  
+local ListSudos ={Sudo_Id,1229585839}  
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -128,9 +128,9 @@ end
 function Controllerbanall(ChatId,UserId)
 Status = 0
 DevelopersQ = Redis:sismember(MTX.."MATX:DevelopersQ:Groups",UserId) 
-if UserId == 1712951948 then
+if UserId == 1229585839 then
 Status = true
-elseif UserId == 694635826 then
+elseif UserId == 1229585839 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -154,10 +154,10 @@ Managers = Redis:sismember(MTX.."MATX:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(MTX.."MATX:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(MTX.."MATX:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1712951948 then
+if UserId == 1229585839 then
 Status = 'مبرمج السورس'
-elseif UserId == 694635826 then
-Status = ' Source Programmer'
+elseif UserId == 1229585839 then
+Status = 'مطور السورس'
 elseif UserId == Sudo_Id then  
 Status = 'المطور الاساسي'
 elseif UserId == MTX then
@@ -734,9 +734,9 @@ Managers = Redis:sismember(MTX.."MATX:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(MTX.."MATX:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(MTX.."MATX:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1712951948 then
+if UserId == 1229585839 then
 Status = true
-elseif UserId == 694635826 then
+elseif UserId == 1229585839 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -773,9 +773,9 @@ Managers = Redis:sismember(MTX.."MATX:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(MTX.."MATX:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(MTX.."MATX:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1712951948 then
+if UserId == 1229585839 then
 Status = true
-elseif UserId == 694635826 then
+elseif UserId == 1229585839 then
 Status = true
 elseif UserId == Sudo_Id then    
 Status = true
@@ -901,11 +901,11 @@ return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id}),LuaTele.setChatMemberSt
 elseif Statusrestricted(msg.chat_id,msg.sender.user_id).SilentGroup == true then
 return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
 end
-if tonumber(msg.sender.user_id) == 1712951948 then
+if tonumber(msg.sender.user_id) == 1229585839 then
 msg.Name_Controller = 'مبرمج السورس '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 694635826 then
-msg.Name_Controller = 'Source Programmer  '
+elseif tonumber(msg.sender.user_id) == 1229585839 then
+msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender.user_id) == true then  
 msg.The_Controller = 1
@@ -2281,7 +2281,7 @@ if not msg.ControllerBot then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
 os.execute('rm -rf MATX.lua')
-download('https://raw.githubusercontent.com/MTSORC/i/main/MATX.lua','MATX.lua')
+download('https://raw.githubusercontent.com/BIOOD1/NOP/master/MATX.lua','MATX.lua')
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙تم تحديث السورس * ',"md",true)  
 end
 if text == '『 تعطيل الاذاعه 』' or text == 'تعطيل الاذاعه' then
@@ -2935,7 +2935,7 @@ local List = {
 [[
 ☆•𝐮𝐬𝐞𝐫 : #username 𖣬  
 ☆•𝐦𝐬𝐠  : #msgs 𖣬 
-☆•??𝐭𝐚 : #stast 𖣬 
+☆•𝐬𝐭𝐚 : #stast 𖣬 
 ☆•𝐢𝐝  : #id 𖣬
 ]],
 [[
@@ -9653,7 +9653,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,'✞︙اوامر الحمايه↫⤈
+return LuaTele.sendText(msg_chat_id,msg_id, [[*'✞︙اوامر الحمايه↫⤈
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙قفل ◎ فتح ↫الامر↫⤈
 ✞︙↫بالتقيد ◎ بالطرد ◎ بالكتم
@@ -9688,7 +9688,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'✞︙اوامر الحمايه↫�
 ✞︙قفل ◎ فتح ↫ الكل
 ✞︙قفل ◎ فتح ↫ التفليش
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
-',"md",false, false, false, false, reply_markup)
+*]],"md",false, false, false, false, reply_markup)
 elseif text == 'م2' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -9708,7 +9708,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,'  ✞︙اوامر الادمنيه↫⤈
+return LuaTele.sendText(msg_chat_id,msg_id, [[* ✞︙اوامر الادمنيه↫⤈
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙الاعدادت
 ✞︙تاك للكل
@@ -9746,7 +9746,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'  ✞︙اوامر الادمنيه�
 ✞︙المميزين ◎ قائمه المنع ◎ ترحيب
 ✞︙قوانين ◎ الرابط ◎ بالرد على رساله
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
-  ',"md",false, false, false, false, reply_markup)
+  *]],"md",false, false, false, false, reply_markup)
 elseif text == 'م3' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -9766,7 +9766,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,'  ✞︙اوامر المدراء↫⤈
+return LuaTele.sendText(msg_chat_id,msg_id, [[*✞︙اوامر المدراء↫⤈
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙فحص البوت
 ✞︙تثبيت
@@ -9798,7 +9798,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'  ✞︙اوامر المدراء↫
 ✞︙الميمز ◎ غنيلي ◎ صورتي ◎ اليوتيوب
 ✞︙اغنيه ◎ متحركه ◎ صوره ◎ انمي
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
-  ',"md",false, false, false, false, reply_markup)
+*]],"md",false, false, false, false, reply_markup)
 elseif text == 'م4' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -9818,7 +9818,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,'  ✞︙اوامر المنشئين↫⤈
+return LuaTele.sendText(msg_chat_id,msg_id, [[*✞︙اوامر المنشئين↫⤈
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙تاك للكل
 ✞︙تنزيل الكل
@@ -9843,7 +9843,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'  ✞︙اوامر المنشئين�
 ✞︙الحظر ◎ الكتم
 ✞︙المسح التلقائي ◎ الرفع
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
-  ',"md",false, false, false, false, reply_markup)
+  *]],"md",false, false, false, false, reply_markup)
 elseif text == 'م5' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -9863,7 +9863,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر المنشئين الاساسيين↫⤈
+return LuaTele.sendText(msg_chat_id,msg_id, [[* ✞︙اوامر المنشئين الاساسيين↫⤈
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙وضع اسم
 ✞︙وضع صوره
@@ -9883,7 +9883,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر المنشئين �
 ✞︙المنشئين الاساسيين 
 ✞︙حذف ◎ مسح جميع الرتب
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
-   ',"md",false, false, false, false, reply_markup)
+*]],"md",false, false, false, false, reply_markup)
    elseif text == 'م6' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -9903,7 +9903,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر المجموعه↫⤈
+return LuaTele.sendText(msg_chat_id,msg_id, [[*✞︙اوامر المجموعه↫⤈
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙ترتيب الاوامر
 ✞︙اضف/مسح امر
@@ -9950,7 +9950,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر المجموعه�
 ✞︙الساعه
 ✞︙التاريخ
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
-',"md",false, false, false, false, reply_markup)
+*]],"md",false, false, false, false, reply_markup)
 elseif text == 'م7' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -9970,7 +9970,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر التحشيش↫⤈
+return LuaTele.sendText(msg_chat_id,msg_id, [[*✞︙اوامر التحشيش↫⤈
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙رفع + تنزيل ↫الامࢪ ↓
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
@@ -10010,7 +10010,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر التحشيش↫�
 ✞︙رفع + تنزيل ↫الحاته
 ✞︙تاك للحاتات
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
-',"md",false, false, false, false, reply_markup)
+*]],"md",false, false, false, false, reply_markup)
 elseif text == 'م8' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -10030,7 +10030,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر المطورين↫⤈
+return LuaTele.sendText(msg_chat_id,msg_id, [[*✞︙اوامر المطورين↫⤈
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙تفعيل ↫تعطيل 
 ✞︙المجموعات ↫المشتركين ↫الاحصائيات
@@ -10041,7 +10041,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر المطورين�
 ✞︙اسم ~ ايدي + بوت غادر 
 ✞︙اذاعه 
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
-',"md",false, false, false, false, reply_markup)
+*]],"md",false, false, false, false, reply_markup)
 elseif text == 'م9' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -10061,7 +10061,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر مطور الاساسي↫⤈
+return LuaTele.sendText(msg_chat_id,msg_id, [[*✞︙اوامر مطور الاساسي↫⤈
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙تفعيل
 ✞︙تعطيل
@@ -10119,7 +10119,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر مطور الاس�
 ✞︙تنظيف المشتركين
 ✞︙تنظيف الكروبات
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
-',"md",false, false, false, false, reply_markup)
+*]],"md",false, false, false, false, reply_markup)
 elseif text == 'م10' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -10139,7 +10139,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر الاعضاء↫⤈
+return LuaTele.sendText(msg_chat_id,msg_id, [[*✞︙اوامر الاعضاء↫⤈
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙عرض معلوماتك ↑↓
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
@@ -10169,7 +10169,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,' ✞︙اوامر الاعضاء↫�
 ✞︙شنو رئيك بهاي بالرد
 ✞︙تحب هذا
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
-',"md",false, false, false, false, reply_markup)
+*]],"md",false, false, false, false, reply_markup)
 
 elseif text == 'الالعاب' then
 if not msg.Addictive then
