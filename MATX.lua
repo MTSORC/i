@@ -10190,7 +10190,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,'  ✞︙قائمه الالعاب البوت
+return LuaTele.sendText(msg_chat_id,msg_id, [[*✞︙قائمه الالعاب البوت
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙لعبة المختلف↫المختلف
 ✞︙لعبة الامثله↫امثله
@@ -10207,7 +10207,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'  ✞︙قائمه الالعاب ا
 ٴ𓍹======𝔹𝔸ℕ𝔻𝔼======𓍻ٴ
 ✞︙نقاطي↫لعرض نقاطك
 ✞︙بيع نقاطي↫العدد
-  ',"md",false, false, false, false, reply_markup)
+*]],"md",false, false, false, false, reply_markup)
 end
 if text == 'هاي' or text == 'هيي' then
 if not Redis:get(MTX.."MATX:Sasa:Jeka"..msg_chat_id) then
