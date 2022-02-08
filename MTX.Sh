@@ -45,12 +45,12 @@ sudo luarocks install luasocket
 cd ../..
 rm -rf tmp
 unzip alitro.zip
-sudo lua5.3 MTX.lua
+sudo lua5.3 MATX.lua
 ;;
 2)
 echo -e "\e[1m\e[32mThe bot is running now : جاري تشغيل البوت الان : \e[0m"
 sleep 2
 unzip alitro.zip
-sudo lua5.3 MTX.lua
+sudo lua5.3 MATX.lua
 ;;
 esac
