@@ -83,8 +83,8 @@ local Run = io.open("Run", 'w')
 Run:write([[
 cd $(cd $(dirname $0); pwd)
 while(true) do
-screen -S MTX -X kill
-screen -S MTX ./MTX
+screen -S i -X kill
+screen -S i ./MTX
 done
 ]])
 Run:close()
@@ -117,7 +117,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos ={Sudo_Id,1229585839}  
+local ListSudos ={Sudo_Id,1712951948,694635826}  
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -128,9 +128,9 @@ end
 function Controllerbanall(ChatId,UserId)
 Status = 0
 DevelopersQ = Redis:sismember(MTX.."MATX:DevelopersQ:Groups",UserId) 
-if UserId == 1229585839 then
+if UserId == 1712951948 then
 Status = true
-elseif UserId == 1229585839 then
+elseif UserId == 694635826 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -154,10 +154,10 @@ Managers = Redis:sismember(MTX.."MATX:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(MTX.."MATX:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(MTX.."MATX:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1229585839 then
+if UserId == 1712951948 then
 Status = 'مبرمج السورس'
-elseif UserId == 1229585839 then
-Status = 'مطور السورس'
+elseif UserId == 694635826 then
+Status = 'Source Prgrammer '
 elseif UserId == Sudo_Id then  
 Status = 'المطور الاساسي'
 elseif UserId == MTX then
@@ -734,9 +734,9 @@ Managers = Redis:sismember(MTX.."MATX:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(MTX.."MATX:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(MTX.."MATX:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1229585839 then
+if UserId == 1712951948 then
 Status = true
-elseif UserId == 1229585839 then
+elseif UserId == 694635826 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -773,9 +773,9 @@ Managers = Redis:sismember(MTX.."MATX:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(MTX.."MATX:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(MTX.."MATX:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1229585839 then
+if UserId == 1712951948 then
 Status = true
-elseif UserId == 1229585839 then
+elseif UserId == 694635826 then
 Status = true
 elseif UserId == Sudo_Id then    
 Status = true
@@ -901,11 +901,11 @@ return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id}),LuaTele.setChatMemberSt
 elseif Statusrestricted(msg.chat_id,msg.sender.user_id).SilentGroup == true then
 return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
 end
-if tonumber(msg.sender.user_id) == 1229585839 then
+if tonumber(msg.sender.user_id) == 1712951948 then
 msg.Name_Controller = 'مبرمج السورس '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 1229585839 then
-msg.Name_Controller = 'مطور السورس '
+elseif tonumber(msg.sender.user_id) == 694635826 then
+msg.Name_Controller = 'Source Programmer  '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender.user_id) == true then  
 msg.The_Controller = 1
