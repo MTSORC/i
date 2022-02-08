@@ -2281,7 +2281,7 @@ if not msg.ControllerBot then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
 os.execute('rm -rf MATX.lua')
-download('https://raw.githubusercontent.com/BIOOD1/NOP/master/MATX.lua','MATX.lua')
+download('https://raw.githubusercontent.com/MTSORC/i/main/MATX.lua','MATX.lua')
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✞︙تم تحديث السورس * ',"md",true)  
 end
 if text == '『 تعطيل الاذاعه 』' or text == 'تعطيل الاذاعه' then
@@ -2935,7 +2935,7 @@ local List = {
 [[
 ☆•𝐮𝐬𝐞𝐫 : #username 𖣬  
 ☆•𝐦𝐬𝐠  : #msgs 𖣬 
-☆•𝐬𝐭𝐚 : #stast 𖣬 
+☆•??𝐭𝐚 : #stast 𖣬 
 ☆•𝐢𝐝  : #id 𖣬
 ]],
 [[
